@@ -58,9 +58,12 @@ img { max-width: 100%; height: auto; display: block; }
 
 /* Hero */
 .hero { display: grid; gap: 28px; align-items: center; padding-block: 12px 40px; }
-.art { position: relative; max-width: 420px; width: calc(100% - 28px); margin: 0 auto; padding-bottom: 54px; }
-.tile { border-radius: 22%; border: 4px solid #2f2633; overflow: hidden; transform: rotate(-3deg); box-shadow: 0 6px 0 #2f2633, 0 30px 50px -25px rgba(47, 38, 51, 0.6); }
-.art .cat { position: absolute; bottom: 0; width: 32%; filter: drop-shadow(0 6px 6px rgba(47, 38, 51, 0.18)); }
+.art { position: relative; max-width: 400px; width: calc(100% - 28px); margin: 0 auto; padding-bottom: 54px; }
+/* Gameplay clip in a rounded frame (9:16, muted loop; the poster shows when autoplay is off or blocked). */
+.clip { display: block; width: 66%; max-width: 270px; margin: 0 auto; aspect-ratio: 9 / 16; height: auto; object-fit: cover;
+  border-radius: 28px; border: 4px solid #2f2633; background: #f6efe3; transform: rotate(-3deg);
+  box-shadow: 0 6px 0 #2f2633, 0 30px 50px -25px rgba(47, 38, 51, 0.6); }
+.art .cat { position: absolute; bottom: 0; width: 32%; z-index: 2; filter: drop-shadow(0 6px 6px rgba(47, 38, 51, 0.18)); }
 .art .c1 { left: -2%; } .art .c2 { left: 35%; bottom: -10px; width: 30%; } .art .c3 { right: -2%; }
 .block { position: absolute; width: 46px; height: 46px; border-radius: 12px; border: 3px solid #2f2633;
   background: repeating-linear-gradient(135deg, rgba(255,255,255,0.28) 0 4px, transparent 4px 9px), var(--c);
@@ -120,6 +123,7 @@ footer p { margin: 4px 0; }
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
 {"@type":"Organization","@id":"https://dumplingcat.com/#org","name":"Dumpling Cat","url":"https://dumplingcat.com/","logo":"https://dumplingcat.com/assets/icon-192.png","email":"support@dumplingcat.com"},
+{"@type":"VideoObject","name":"Kitty Swarm gameplay","description":"Kittens pour out of their houses and carry a pixel picture of a kitten with a ball of yarn home, block by block.","thumbnailUrl":"https://dumplingcat.com/assets/kitty-swarm-loop-poster.jpg","contentUrl":"https://dumplingcat.com/assets/kitty-swarm-loop.mp4","uploadDate":"2026-10-27","duration":"PT7S","publisher":{"@id":"https://dumplingcat.com/#org"}},
 {"@type":"VideoGame","name":"Kitty Swarm","url":"https://dumplingcat.com/","image":"https://dumplingcat.com/assets/og.jpg","description":"A cosy cat sort puzzle: tap a house, send the kittens out and watch them carry a pixel picture home, block by block. 200 picture levels and 14 cat breeds to collect.","genre":["Puzzle","Casual"],"gamePlatform":["Android","iOS"],"applicationCategory":"Game","operatingSystem":"Android, iOS","publisher":{"@id":"https://dumplingcat.com/#org"},"author":{"@id":"https://dumplingcat.com/#org"}}
 ]}
 </script>
@@ -134,7 +138,16 @@ footer p { margin: 4px 0; }
 <div class="wrap hero">
   <div class="art" aria-hidden="true">
     <span class="block b1"></span><span class="block b2"></span><span class="block b3"></span>
-    <img class="tile" src="/assets/icon-720.webp" alt="" width="720" height="720">
+    <video class="clip" autoplay muted loop playsinline preload="metadata" poster="/assets/kitty-swarm-loop-poster.jpg" width="540" height="960">
+      <source src="/assets/kitty-swarm-loop.mp4" type="video/mp4">
+      <img src="/assets/kitty-swarm-loop-poster.jpg" alt="" width="540" height="960">
+    </video>
+    <script>
+      // Reduced motion: no autoplay, the poster stays.
+      (function (v) {
+        if (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) { v.removeAttribute('autoplay'); v.autoplay = false; v.pause(); }
+      })(document.currentScript.previousElementSibling);
+    </script>
     <img class="cat c1" src="/assets/cats/calico.webp" alt="" width="240" height="240">
     <img class="cat c2" src="/assets/cats/plain.webp" alt="" width="240" height="240">
     <img class="cat c3" src="/assets/cats/tuxedo.webp" alt="" width="240" height="240">
