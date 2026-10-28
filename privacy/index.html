@@ -60,15 +60,15 @@ footer { margin-top: 40px; color: var(--muted); font-size: 0.9em; }
 <nav><a href="#en">English</a><a href="#vi" hreflang="vi">Tiếng Việt</a></nav>
 </header>
 <section id="en" lang="en">
-<p><strong>Effective date:</strong> October 26, 2026</p>
+<p><strong>Effective date:</strong> October 28, 2026</p>
 <p>Kitty Swarm is a puzzle game published by <strong>Dumpling Cat</strong> ("we", "us"), an independent developer based in Vietnam. This policy explains what information the game uses, why, who else receives it, and what you can do about it. We have tried to keep it short and plain.</p>
 <p>If you have a question, write to <strong><a href="mailto:support@dumplingcat.com">support@dumplingcat.com</a></strong>.</p>
 <h3 id="en-1-the-short-version">1. The short version</h3>
 <ul>
 <li>You do not create an account. We never ask for your name, email, phone number, contacts, photos or precise location.</li>
 <li>Your game progress is saved <strong>on your device</strong>. We do not run our own game servers.</li>
-<li>The game uses a few services from other companies to count installs, understand how levels are played and fix crashes: <strong>Google Firebase</strong> (Analytics and Crashlytics) and <strong>AppsFlyer</strong> (install attribution). They receive device identifiers and usage information described below.</li>
-<li>The current version shows <strong>no ads</strong> and sells <strong>nothing</strong>. If ads and in-app purchases are added later, section 6 explains what will change, and we will update this policy before that version is released.</li>
+<li>The game uses two services from Google to understand how levels are played and to fix crashes: <strong>Firebase Analytics</strong> and <strong>Firebase Crashlytics</strong>. They receive device identifiers and usage information described below. No other company receives data from the game.</li>
+<li>The current version shows <strong>no ads</strong>, sells <strong>nothing</strong> and uses <strong>no install attribution service</strong>. If these are added later, section 6 explains what will change, and we will update this policy before that version is released.</li>
 <li>You can ask us to delete your data at any time by email (section 10).</li>
 </ul>
 <h3 id="en-2-who-is-responsible">2. Who is responsible</h3>
@@ -85,37 +85,32 @@ Email: <a href="mailto:support@dumplingcat.com">support@dumplingcat.com</a></p>
 </ul>
 <p>This file stays on your device. We do not receive it. Deleting the game deletes it. If your phone backs up app data (for example Android backup or an iCloud backup), the file may be included in that backup, which Google or Apple handle under your own account with them.</p>
 <h3 id="en-4-information-collected-by-services-in-the-game">4. Information collected by services in the game</h3>
-<p>When you play, these services collect information automatically, through their software kits (SDKs) built into the game. The game needs an internet connection for this; it still works offline.</p>
+<p>When you play, the current version uses these services. They collect information automatically, through their software kits (SDKs) built into the game. The game needs an internet connection for this; it still works offline.</p>
 <h4 id="en-google-firebase-analytics-google-llc">Google Firebase Analytics (Google LLC)</h4>
 <ul>
-<li><strong>What:</strong> an app-instance ID created for your installation; your device's advertising ID (Android Advertising ID, or Apple's IDFA only if you allow tracking on iOS); device model, operating system and version, language, app version; approximate location (country or city) derived from your IP address; game events such as "level started", "level won", "level stuck", "booster used", session start and length.</li>
-<li><strong>Why:</strong> to see how many people play, where players give up, which levels are too hard or too easy, and how many come back the next days, so we can improve the game.</li>
+<li><strong>What:</strong> an app-instance ID created for your installation; your in-game <strong>Player ID</strong> (see below); your device's advertising ID (Android Advertising ID, or Apple's IDFA only if you allow tracking on iOS); device model, operating system and version, language, app version; approximate location (country or city) derived from your IP address; game events such as "level started", "level won", "level stuck", "level retried", "level quit", "life lost", tutorial steps, "booster used", pictures added to the album, cat breeds unlocked and when the store's review prompt was shown; and events Firebase records by itself, such as first open, session start and length, and app updates.</li>
+<li><strong>Why:</strong> to see how many people play, where players give up, which levels are too hard or too easy, and how many come back the next days, so we can improve the game. Firebase is not linked to any advertising service in this version; we do not use this data to show you ads.</li>
 </ul>
 <h4 id="en-google-firebase-crashlytics-google-llc">Google Firebase Crashlytics (Google LLC)</h4>
 <ul>
-<li><strong>What:</strong> crash reports: the error and where in the code it happened, the state of the game at that moment, device model, operating system, free memory/disk, and a random Crashlytics installation ID.</li>
+<li><strong>What:</strong> crash reports: the error and where in the code it happened, the state of the game at that moment (such as the last game events before the crash), device model, operating system, free memory/disk, and a random Crashlytics installation ID.</li>
 <li><strong>Why:</strong> to find and fix crashes.</li>
 </ul>
-<h4 id="en-appsflyer-appsflyer-ltd">AppsFlyer (AppsFlyer Ltd.)</h4>
-<ul>
-<li><strong>What:</strong> your device's advertising ID (on Android; on iOS only if you allow tracking), other device identifiers set by your operating system (such as Apple's IDFV), IP address, device model, operating system, language, app version, install time and the store referrer (which ad or link, if any, led to the install), and a few game milestones (for example finishing the tutorial or reaching level 5, 10, 20, 40).</li>
-<li><strong>Why:</strong> to know which advertising campaign brought an install, so we can stop ads that do not work. AppsFlyer may report installs and milestones to the ad network that showed the ad (for example Meta, Google or TikTok) so that network can measure and optimise our campaign.</li>
-</ul>
-<p>If we link analytics to your in-game Player ID, it is only so we can find and delete your data when you ask (section 10).</p>
+<p><strong>Player ID.</strong> Firebase Analytics data is linked to your in-game Player ID, the random number shown in Settings (it is not your name or any account). We use it so we can find and delete your data when you ask (section 10). Crash reports from Crashlytics are <strong>not</strong> linked to your Player ID.</p>
 <p>We do <strong>not</strong> use these services to collect your name, email, contacts, photos, microphone, camera, precise (GPS) location or any content you type.</p>
 <h3 id="en-5-who-receives-information">5. Who receives information</h3>
 <p>We do not sell your personal information for money. Information is shared only with:</p>
 <div class="t"><table>
 <tr><th>Company</th><th>Role</th><th>Their privacy information</th></tr>
 <tr><td>Google LLC (Firebase Analytics, Crashlytics)</td><td>analytics and crash reports, processes data for us</td><td><a href="https://firebase.google.com/support/privacy" rel="noopener">firebase.google.com/support/privacy</a>, <a href="https://policies.google.com/privacy" rel="noopener">policies.google.com/privacy</a></td></tr>
-<tr><td>AppsFlyer Ltd.</td><td>install attribution, processes data for us</td><td><a href="https://www.appsflyer.com/legal/services-privacy-policy/" rel="noopener">appsflyer.com/legal/services-privacy-policy</a></td></tr>
-<tr><td>Advertising networks that showed an ad for Kitty Swarm (e.g. Meta, Google, TikTok)</td><td>receive install and milestone reports through AppsFlyer to measure our campaigns</td><td>their own policies, e.g. <a href="https://www.facebook.com/privacy/policy/" rel="noopener">Meta</a>, <a href="https://policies.google.com/privacy" rel="noopener">Google</a>, <a href="https://www.tiktok.com/legal/privacy-policy" rel="noopener">TikTok</a></td></tr>
 <tr><td>Google Play / Apple App Store</td><td>distribute the game and (later) process payments</td><td><a href="https://policies.google.com/privacy" rel="noopener">policies.google.com/privacy</a>, <a href="https://www.apple.com/legal/privacy/" rel="noopener">apple.com/legal/privacy</a></td></tr>
 </table></div>
+<p>We do not share information with advertising networks in this version. Companies that will receive information in a later version (section 6) will be listed here before that version is released.</p>
 <p>We may also disclose information if the law requires it, to protect players or our rights, or to a buyer of the game if the game is sold (the buyer would have to follow this policy).</p>
-<p>These companies may process information in countries other than yours, including the United States, the EU and Israel. They use safeguards such as the European Commission's Standard Contractual Clauses.</p>
-<h3 id="en-6-when-ads-and-purchases-arrive-not-in-the-game-yet">6. When ads and purchases arrive (not in the game yet)</h3>
-<p>We plan to add these in a later version. Until then, the shop screens in test versions do not charge anything and no ads are shown. Before the version with ads or purchases is released, we will update this policy and the store privacy labels.</p>
+<p>These companies may process information in countries other than yours, including the United States and the EU. Google uses safeguards such as the European Commission's Standard Contractual Clauses.</p>
+<h3 id="en-6-planned-attribution-ads-and-purchases-not-in-the-game-yet">6. Planned: attribution, ads and purchases (not in the game yet)</h3>
+<p>We plan to add these in a later version. Until then, test versions have no shop and show no ads; buttons that will later offer an optional ad give their bonus for free. Before a version with any of these is released, we will update this policy and the store privacy labels.</p>
+<p><strong>Install attribution.</strong> We plan to use <strong>AppsFlyer</strong> (AppsFlyer Ltd.) to learn which advertising campaign brought an install, so we can stop ads that do not work. It would collect your device's advertising ID (on iOS only if you allow tracking), other device identifiers set by your operating system (such as Apple's IDFV), IP address, device information, install time and the store referrer (which ad or link, if any, led to the install), and a few game milestones (for example finishing the tutorial or reaching a level). AppsFlyer may report installs and milestones to the ad network that showed the ad (for example Meta, Google or TikTok) so it can measure our campaign. It is not in the game yet; we will list it, the ad networks that receive its reports and how long it keeps data in sections 4, 5 and 9 before it is enabled. Policy: <a href="https://www.appsflyer.com/legal/services-privacy-policy/" rel="noopener">AppsFlyer</a>.</p>
 <p><strong>Ads.</strong> The game will show rewarded ads (you choose to watch one for a bonus), full-screen ads between some levels and a banner, through <strong>AppLovin MAX</strong> and ad networks connected to it, starting with <strong>Google AdMob</strong>. Others may be added (for example Pangle, Mintegral, Unity Ads/ironSource, Meta Audience Network); we will list each one here before it is enabled. Ad networks collect your advertising ID, IP address, device information, approximate location and how you interact with ads, to show ads, limit how often you see them, measure them, prevent fraud and, where you allow it, personalise them.</p>
 <ul>
 <li><strong>Your consent:</strong> in the EEA, the UK and Switzerland, the game will ask for your choice through <strong>Google's consent form (UMP)</strong> before personalised ads load. You can change it later in Settings. On iOS, the game will ask your permission through Apple's <strong>App Tracking Transparency</strong> prompt; if you say no, your IDFA is not used and ads are not personalised with data from other companies' apps.</li>
@@ -126,33 +121,34 @@ Email: <a href="mailto:support@dumplingcat.com">support@dumplingcat.com</a></p>
 <p><strong>Cloud save and notifications</strong> may come later. If they do, we will describe them here before release.</p>
 <h3 id="en-7-legal-bases-eea-uk-and-similar-laws">7. Legal bases (EEA, UK and similar laws)</h3>
 <ul>
-<li><strong>Analytics, crash reports and attribution:</strong> our legitimate interest in running, fixing and improving the game and knowing which advertising works, or your <strong>consent</strong> where the law requires it for reading or storing identifiers on your device.</li>
+<li><strong>Analytics and crash reports:</strong> our legitimate interest in running, fixing and improving the game, or your <strong>consent</strong> where the law requires it for reading or storing identifiers on your device.</li>
+<li><strong>Install attribution (later):</strong> our legitimate interest in knowing which advertising works, or your consent where the law requires it.</li>
 <li><strong>Personalised ads (later):</strong> your consent.</li>
 <li><strong>Purchases (later):</strong> performing our contract with you.</li>
 <li><strong>Answering your emails:</strong> legitimate interest, or performing what you asked.</li>
 </ul>
 <p>You can withdraw consent at any time (section 10); this does not affect what happened before.</p>
 <h3 id="en-8-children">8. Children</h3>
-<p>Kitty Swarm is a puzzle game for teenagers and adults. <strong>It is not designed for children under 13</strong> and we do not knowingly collect personal information from children under 13 (or the higher age set by law in your country, such as 16 in some EU countries). The game uses analytics, advertising measurement and, in a later version, ads, which are not suitable for young children.</p>
+<p>Kitty Swarm is a puzzle game for teenagers and adults. <strong>It is not designed for children under 13</strong> and we do not knowingly collect personal information from children under 13 (or the higher age set by law in your country, such as 16 in some EU countries). The game uses analytics and, in later versions, advertising measurement and ads, which are not suitable for young children.</p>
 <p>If you are a parent or guardian and believe your child has played the game and their data was collected, write to <a href="mailto:support@dumplingcat.com">support@dumplingcat.com</a> and we will delete it (section 10).</p>
 <h3 id="en-9-how-long-we-keep-information">9. How long we keep information</h3>
 <ul>
 <li><strong>Save file on your device:</strong> until you delete the game or its data.</li>
 <li><strong>Firebase Analytics:</strong> user-level event data is kept for 14 months, then deleted automatically; reports that show only totals (for example "1,000 players reached level 10") may be kept longer.</li>
 <li><strong>Firebase Crashlytics:</strong> crash reports and their identifiers are kept for 90 days.</li>
-<li><strong>AppsFlyer:</strong> for as long as needed to measure our advertising, under our agreement with AppsFlyer, and deleted on request.</li>
 <li><strong>Emails you send us:</strong> as long as needed to answer you, and no more than 2 years.</li>
+<li><strong>Services added later (section 6):</strong> listed here with how long they keep data before they are enabled.</li>
 </ul>
 <h3 id="en-10-your-choices-and-rights">10. Your choices and rights</h3>
 <ul>
-<li><strong>Stop collection:</strong> you can reset or remove your advertising ID (Android: Settings &gt; Privacy &gt; Ads; iOS: tracking is off unless you allow it). Uninstalling the game stops all collection.</li>
+<li><strong>Stop collection:</strong> you can reset or remove your advertising ID (Android: Settings &gt; Privacy &gt; Ads; iOS: tracking is off unless you allow it). This version has no in-game switch to turn analytics off; uninstalling the game stops all collection.</li>
 <li><strong>Access, correction, deletion, objection, portability:</strong> depending on where you live (for example the EU/UK GDPR, California's CCPA/CPRA, Vietnam's Personal Data Protection Law, the Philippines' Data Privacy Act), you may ask to see, correct, delete or receive a copy of your data, object to or restrict its use, and withdraw consent.</li>
-<li><strong>How to ask:</strong> email <strong><a href="mailto:support@dumplingcat.com">support@dumplingcat.com</a></strong> with the subject "Privacy request" and the <strong>Player ID</strong> shown at the bottom of the Settings screen. We do not need any other proof of identity because we hold no name or email for you. We will answer within 30 days and ask Google and AppsFlyer to delete the matching data.</li>
-<li><strong>California:</strong> we do not sell personal information for money. Measuring ads with ad networks may count as "sharing" for cross-context behavioural advertising under California law; you can opt out by emailing us or by limiting ad tracking on your device. We will not treat you differently for using your rights.</li>
+<li><strong>How to ask:</strong> email <strong><a href="mailto:support@dumplingcat.com">support@dumplingcat.com</a></strong> with the subject "Privacy request" and the <strong>Player ID</strong> shown at the bottom of the Settings screen. We do not need any other proof of identity because we hold no name or email for you. We will answer within 30 days and ask Google to delete the Firebase Analytics data linked to that Player ID. Crash reports are not linked to it; they are deleted automatically after 90 days.</li>
+<li><strong>California:</strong> we do not sell personal information, and this version does not share it for cross-context behavioural advertising. If a later version measures ads with ad networks (section 6), that may count as "sharing" under California law; this section will then explain how to opt out. We will not treat you differently for using your rights.</li>
 <li><strong>Complaints:</strong> you can also complain to your local data protection authority.</li>
 </ul>
 <h3 id="en-11-security">11. Security</h3>
-<p>Information sent by the game to these services is encrypted in transit (HTTPS/TLS). We limit access to the analytics and attribution dashboards to ourselves and use two-step verification. No system is perfectly secure; if a breach affects you, we will tell you and the authorities as the law requires.</p>
+<p>Information sent by the game to these services is encrypted in transit (HTTPS/TLS). We limit access to the analytics and crash-report dashboards to ourselves and use two-step verification. No system is perfectly secure; if a breach affects you, we will tell you and the authorities as the law requires.</p>
 <h3 id="en-12-changes-to-this-policy">12. Changes to this policy</h3>
 <p>We will update this page when the game changes what it collects (for example when ads or purchases are added) and change the date at the top. For important changes we will also tell you in the game or the store notes.</p>
 <h3 id="en-13-contact">13. Contact</h3>
@@ -162,7 +158,7 @@ This policy: <a href="https://dumplingcat.com/privacy">https://dumplingcat.com/p
 </section>
 <section id="vi" lang="vi">
 <h2 id="vi-ch-nh-s-ch-quy-n-ri-ng-t-c-a-kitty-swarm">Chính sách quyền riêng tư của Kitty Swarm</h2>
-<p><strong>Ngày hiệu lực:</strong> 26/10/2026</p>
+<p><strong>Ngày hiệu lực:</strong> 28/10/2026</p>
 <p>Kitty Swarm là trò chơi giải đố do <strong>Dumpling Cat</strong> ("chúng tôi") phát hành, một nhà phát triển độc lập ở Việt Nam. Chính sách này nói rõ trò chơi dùng thông tin gì, để làm gì, ai khác nhận được, và bạn có thể làm gì. Chúng tôi cố viết ngắn và dễ hiểu.</p>
 <p>Có câu hỏi, hãy gửi thư tới <strong><a href="mailto:support@dumplingcat.com">support@dumplingcat.com</a></strong>.</p>
 <p>Bản tiếng Anh là bản gốc; nếu có khác biệt, bản tiếng Anh được ưu tiên.</p>
@@ -170,8 +166,8 @@ This policy: <a href="https://dumplingcat.com/privacy">https://dumplingcat.com/p
 <ul>
 <li>Bạn không cần tạo tài khoản. Chúng tôi không bao giờ hỏi tên, email, số điện thoại, danh bạ, ảnh hay vị trí chính xác của bạn.</li>
 <li>Tiến độ chơi được lưu <strong>trên máy của bạn</strong>. Chúng tôi không có máy chủ trò chơi riêng.</li>
-<li>Trò chơi dùng vài dịch vụ của công ty khác để đếm lượt cài, hiểu cách người chơi chơi các màn và sửa lỗi văng: <strong>Google Firebase</strong> (Analytics và Crashlytics) và <strong>AppsFlyer</strong> (đo nguồn cài đặt). Các dịch vụ này nhận mã định danh thiết bị và thông tin sử dụng như mô tả bên dưới.</li>
-<li>Phiên bản hiện tại <strong>không có quảng cáo</strong> và <strong>không bán gì</strong>. Nếu sau này có quảng cáo và mua trong ứng dụng, mục 6 giải thích điều gì sẽ thay đổi, và chúng tôi sẽ cập nhật chính sách này trước khi phát hành phiên bản đó.</li>
+<li>Trò chơi dùng hai dịch vụ của Google để hiểu cách người chơi chơi các màn và sửa lỗi văng: <strong>Firebase Analytics</strong> và <strong>Firebase Crashlytics</strong>. Các dịch vụ này nhận mã định danh thiết bị và thông tin sử dụng như mô tả bên dưới. Không công ty nào khác nhận dữ liệu từ trò chơi.</li>
+<li>Phiên bản hiện tại <strong>không có quảng cáo</strong>, <strong>không bán gì</strong> và <strong>không dùng dịch vụ đo nguồn cài đặt</strong>. Nếu sau này có những thứ này, mục 6 giải thích điều gì sẽ thay đổi, và chúng tôi sẽ cập nhật chính sách này trước khi phát hành phiên bản đó.</li>
 <li>Bạn có thể yêu cầu xoá dữ liệu bất cứ lúc nào qua email (mục 10).</li>
 </ul>
 <h3 id="vi-2-ai-ch-u-tr-ch-nhi-m">2. Ai chịu trách nhiệm</h3>
@@ -188,37 +184,32 @@ Email: <a href="mailto:support@dumplingcat.com">support@dumplingcat.com</a></p>
 </ul>
 <p>Tệp này ở lại trên máy bạn. Chúng tôi không nhận được nó. Xoá trò chơi là xoá tệp. Nếu điện thoại sao lưu dữ liệu ứng dụng (ví dụ sao lưu Android hoặc iCloud), tệp có thể nằm trong bản sao lưu đó, do Google hoặc Apple quản lý theo tài khoản riêng của bạn với họ.</p>
 <h3 id="vi-4-th-ng-tin-do-c-c-d-ch-v-trong-tr-ch-i-thu-th-p">4. Thông tin do các dịch vụ trong trò chơi thu thập</h3>
-<p>Khi bạn chơi, các dịch vụ sau tự động thu thập thông tin qua bộ công cụ phần mềm (SDK) gắn trong trò chơi. Việc này cần kết nối mạng; trò chơi vẫn chơi được khi không có mạng.</p>
+<p>Khi bạn chơi, phiên bản hiện tại dùng các dịch vụ sau. Chúng tự động thu thập thông tin qua bộ công cụ phần mềm (SDK) gắn trong trò chơi. Việc này cần kết nối mạng; trò chơi vẫn chơi được khi không có mạng.</p>
 <h4 id="vi-google-firebase-analytics-google-llc">Google Firebase Analytics (Google LLC)</h4>
 <ul>
-<li><strong>Thu gì:</strong> một mã cài đặt ứng dụng (app-instance ID) tạo cho lượt cài của bạn; mã quảng cáo của thiết bị (Android Advertising ID, hoặc IDFA của Apple chỉ khi bạn cho phép theo dõi trên iOS); dòng máy, hệ điều hành và phiên bản, ngôn ngữ, phiên bản ứng dụng; vị trí gần đúng (quốc gia hoặc thành phố) suy ra từ địa chỉ IP; các sự kiện trong game như "bắt đầu màn", "thắng màn", "bị kẹt", "dùng vật phẩm", lúc bắt đầu và độ dài phiên chơi.</li>
-<li><strong>Để làm gì:</strong> biết có bao nhiêu người chơi, người chơi bỏ cuộc ở đâu, màn nào quá khó hay quá dễ, bao nhiêu người quay lại những ngày sau, để cải thiện trò chơi.</li>
+<li><strong>Thu gì:</strong> một mã cài đặt ứng dụng (app-instance ID) tạo cho lượt cài của bạn; <strong>Player ID</strong> trong game của bạn (xem bên dưới); mã quảng cáo của thiết bị (Android Advertising ID, hoặc IDFA của Apple chỉ khi bạn cho phép theo dõi trên iOS); dòng máy, hệ điều hành và phiên bản, ngôn ngữ, phiên bản ứng dụng; vị trí gần đúng (quốc gia hoặc thành phố) suy ra từ địa chỉ IP; các sự kiện trong game như "bắt đầu màn", "thắng màn", "bị kẹt", "chơi lại màn", "bỏ màn", "mất mạng", các bước hướng dẫn, "dùng vật phẩm", tranh được thêm vào album, giống mèo được mở khoá và lúc hộp đánh giá của cửa hàng được hiện; và các sự kiện Firebase tự ghi, như lần mở đầu tiên, lúc bắt đầu và độ dài phiên chơi, cập nhật ứng dụng.</li>
+<li><strong>Để làm gì:</strong> biết có bao nhiêu người chơi, người chơi bỏ cuộc ở đâu, màn nào quá khó hay quá dễ, bao nhiêu người quay lại những ngày sau, để cải thiện trò chơi. Ở phiên bản này Firebase không được nối với dịch vụ quảng cáo nào; chúng tôi không dùng dữ liệu này để hiện quảng cáo cho bạn.</li>
 </ul>
 <h4 id="vi-google-firebase-crashlytics-google-llc">Google Firebase Crashlytics (Google LLC)</h4>
 <ul>
-<li><strong>Thu gì:</strong> báo cáo lỗi văng: lỗi gì và xảy ra ở đâu trong mã, trạng thái trò chơi lúc đó, dòng máy, hệ điều hành, bộ nhớ/dung lượng trống, và một mã cài đặt Crashlytics ngẫu nhiên.</li>
+<li><strong>Thu gì:</strong> báo cáo lỗi văng: lỗi gì và xảy ra ở đâu trong mã, trạng thái trò chơi lúc đó (như các sự kiện game cuối cùng trước khi văng), dòng máy, hệ điều hành, bộ nhớ/dung lượng trống, và một mã cài đặt Crashlytics ngẫu nhiên.</li>
 <li><strong>Để làm gì:</strong> tìm và sửa lỗi văng.</li>
 </ul>
-<h4 id="vi-appsflyer-appsflyer-ltd">AppsFlyer (AppsFlyer Ltd.)</h4>
-<ul>
-<li><strong>Thu gì:</strong> mã quảng cáo của thiết bị (trên Android; trên iOS chỉ khi bạn cho phép theo dõi), các mã định danh khác do hệ điều hành đặt (như IDFV của Apple), địa chỉ IP, dòng máy, hệ điều hành, ngôn ngữ, phiên bản ứng dụng, thời điểm cài và thông tin giới thiệu từ cửa hàng (quảng cáo hay đường link nào, nếu có, đã dẫn tới lượt cài), và vài mốc trong game (ví dụ xong phần hướng dẫn, tới màn 5, 10, 20, 40).</li>
-<li><strong>Để làm gì:</strong> biết chiến dịch quảng cáo nào mang lại lượt cài, để dừng các quảng cáo không hiệu quả. AppsFlyer có thể báo lượt cài và các mốc cho mạng quảng cáo đã hiện quảng cáo đó (ví dụ Meta, Google hoặc TikTok) để mạng đó đo và tối ưu chiến dịch của chúng tôi.</li>
-</ul>
-<p>Nếu chúng tôi gắn dữ liệu phân tích với Player ID trong game, đó chỉ là để tìm và xoá dữ liệu của bạn khi bạn yêu cầu (mục 10).</p>
+<p><strong>Player ID.</strong> Dữ liệu Firebase Analytics được gắn với Player ID trong game của bạn, dãy số ngẫu nhiên hiện trong Cài đặt (không phải tên bạn hay tài khoản nào). Chúng tôi dùng nó để tìm và xoá dữ liệu của bạn khi bạn yêu cầu (mục 10). Báo cáo lỗi văng của Crashlytics <strong>không</strong> gắn với Player ID.</p>
 <p>Chúng tôi <strong>không</strong> dùng các dịch vụ này để thu tên, email, danh bạ, ảnh, micro, camera, vị trí chính xác (GPS) hay bất cứ nội dung nào bạn gõ.</p>
 <h3 id="vi-5-ai-nh-n-th-ng-tin">5. Ai nhận thông tin</h3>
 <p>Chúng tôi không bán thông tin cá nhân của bạn để lấy tiền. Thông tin chỉ được chia sẻ với:</p>
 <div class="t"><table>
 <tr><th>Công ty</th><th>Vai trò</th><th>Thông tin quyền riêng tư của họ</th></tr>
 <tr><td>Google LLC (Firebase Analytics, Crashlytics)</td><td>phân tích và báo cáo lỗi, xử lý dữ liệu thay chúng tôi</td><td><a href="https://firebase.google.com/support/privacy" rel="noopener">firebase.google.com/support/privacy</a>, <a href="https://policies.google.com/privacy" rel="noopener">policies.google.com/privacy</a></td></tr>
-<tr><td>AppsFlyer Ltd.</td><td>đo nguồn cài đặt, xử lý dữ liệu thay chúng tôi</td><td><a href="https://www.appsflyer.com/legal/services-privacy-policy/" rel="noopener">appsflyer.com/legal/services-privacy-policy</a></td></tr>
-<tr><td>Các mạng quảng cáo đã hiện quảng cáo cho Kitty Swarm (ví dụ Meta, Google, TikTok)</td><td>nhận báo cáo lượt cài và mốc chơi qua AppsFlyer để đo chiến dịch của chúng tôi</td><td>chính sách của họ, ví dụ <a href="https://www.facebook.com/privacy/policy/" rel="noopener">Meta</a>, <a href="https://policies.google.com/privacy" rel="noopener">Google</a>, <a href="https://www.tiktok.com/legal/privacy-policy" rel="noopener">TikTok</a></td></tr>
 <tr><td>Google Play / Apple App Store</td><td>phân phối trò chơi và (sau này) xử lý thanh toán</td><td><a href="https://policies.google.com/privacy" rel="noopener">policies.google.com/privacy</a>, <a href="https://www.apple.com/legal/privacy/" rel="noopener">apple.com/legal/privacy</a></td></tr>
 </table></div>
+<p>Ở phiên bản này chúng tôi không chia sẻ thông tin với mạng quảng cáo nào. Các công ty sẽ nhận thông tin ở phiên bản sau (mục 6) sẽ được ghi ở đây trước khi phát hành phiên bản đó.</p>
 <p>Chúng tôi cũng có thể tiết lộ thông tin nếu pháp luật yêu cầu, để bảo vệ người chơi hoặc quyền của chúng tôi, hoặc cho bên mua lại trò chơi nếu trò chơi được bán (bên mua phải tuân theo chính sách này).</p>
-<p>Các công ty này có thể xử lý thông tin ở nước khác nước bạn, gồm Hoa Kỳ, EU và Israel. Họ dùng các biện pháp bảo vệ như Điều khoản hợp đồng mẫu của Uỷ ban châu Âu.</p>
-<h3 id="vi-6-khi-c-qu-ng-c-o-v-mua-trong-ng-d-ng-ch-a-c-trong-game">6. Khi có quảng cáo và mua trong ứng dụng (chưa có trong game)</h3>
-<p>Chúng tôi dự định thêm các phần này ở phiên bản sau. Cho tới lúc đó, màn hình cửa hàng trong các bản thử không thu tiền và không có quảng cáo nào được hiện. Trước khi phát hành phiên bản có quảng cáo hoặc mua hàng, chúng tôi sẽ cập nhật chính sách này và nhãn quyền riêng tư trên cửa hàng.</p>
+<p>Các công ty này có thể xử lý thông tin ở nước khác nước bạn, gồm Hoa Kỳ và EU. Google dùng các biện pháp bảo vệ như Điều khoản hợp đồng mẫu của Uỷ ban châu Âu.</p>
+<h3 id="vi-6-d-nh-o-ngu-n-c-i-qu-ng-c-o-v-mua-h-ng-ch-a-c-trong-game">6. Dự định: đo nguồn cài, quảng cáo và mua hàng (chưa có trong game)</h3>
+<p>Chúng tôi dự định thêm các phần này ở phiên bản sau. Cho tới lúc đó, các bản thử không có cửa hàng và không hiện quảng cáo; các nút sau này sẽ cho xem quảng cáo (tuỳ chọn) để nhận quà thì hiện tặng quà miễn phí. Trước khi phát hành phiên bản có bất kỳ phần nào trong số này, chúng tôi sẽ cập nhật chính sách này và nhãn quyền riêng tư trên cửa hàng.</p>
+<p><strong>Đo nguồn cài đặt.</strong> Chúng tôi dự định dùng <strong>AppsFlyer</strong> (AppsFlyer Ltd.) để biết chiến dịch quảng cáo nào mang lại lượt cài, để dừng các quảng cáo không hiệu quả. Dịch vụ này sẽ thu mã quảng cáo của thiết bị (trên iOS chỉ khi bạn cho phép theo dõi), các mã định danh khác do hệ điều hành đặt (như IDFV của Apple), địa chỉ IP, thông tin thiết bị, thời điểm cài và thông tin giới thiệu từ cửa hàng (quảng cáo hay đường link nào, nếu có, đã dẫn tới lượt cài), và vài mốc trong game (ví dụ xong phần hướng dẫn hoặc tới một màn). AppsFlyer có thể báo lượt cài và các mốc cho mạng quảng cáo đã hiện quảng cáo đó (ví dụ Meta, Google hoặc TikTok) để mạng đó đo chiến dịch của chúng tôi. Dịch vụ này chưa có trong game; chúng tôi sẽ ghi nó, các mạng quảng cáo nhận báo cáo của nó và thời gian nó giữ dữ liệu vào mục 4, 5 và 9 trước khi bật. Chính sách: <a href="https://www.appsflyer.com/legal/services-privacy-policy/" rel="noopener">AppsFlyer</a>.</p>
 <p><strong>Quảng cáo.</strong> Trò chơi sẽ hiện quảng cáo có thưởng (bạn tự chọn xem để nhận quà), quảng cáo toàn màn hình giữa một số màn và một banner, qua <strong>AppLovin MAX</strong> và các mạng quảng cáo nối với nó, bắt đầu với <strong>Google AdMob</strong>. Có thể thêm mạng khác (ví dụ Pangle, Mintegral, Unity Ads/ironSource, Meta Audience Network); mỗi mạng sẽ được ghi ở đây trước khi bật. Các mạng quảng cáo thu mã quảng cáo, địa chỉ IP, thông tin thiết bị, vị trí gần đúng và cách bạn tương tác với quảng cáo, để hiện quảng cáo, giới hạn số lần xem, đo lường, chống gian lận và, nếu bạn cho phép, cá nhân hoá quảng cáo.</p>
 <ul>
 <li><strong>Sự đồng ý của bạn:</strong> ở Khu vực Kinh tế châu Âu, Anh và Thuỵ Sĩ, trò chơi sẽ hỏi lựa chọn của bạn qua <strong>biểu mẫu đồng ý của Google (UMP)</strong> trước khi tải quảng cáo cá nhân hoá. Bạn có thể đổi lại trong Cài đặt. Trên iOS, trò chơi sẽ xin phép qua hộp <strong>App Tracking Transparency</strong> của Apple; nếu bạn từ chối, IDFA không được dùng và quảng cáo không được cá nhân hoá bằng dữ liệu từ ứng dụng của công ty khác.</li>
@@ -229,33 +220,34 @@ Email: <a href="mailto:support@dumplingcat.com">support@dumplingcat.com</a></p>
 <p><strong>Lưu đám mây và thông báo</strong> có thể có sau này. Nếu có, chúng tôi sẽ mô tả ở đây trước khi phát hành.</p>
 <h3 id="vi-7-c-s-ph-p-l-eea-anh-v-c-c-lu-t-t-ng-t">7. Cơ sở pháp lý (EEA, Anh và các luật tương tự)</h3>
 <ul>
-<li><strong>Phân tích, báo lỗi và đo nguồn cài:</strong> lợi ích chính đáng của chúng tôi trong việc vận hành, sửa và cải thiện trò chơi, biết quảng cáo nào hiệu quả; hoặc <strong>sự đồng ý</strong> của bạn khi luật yêu cầu cho việc đọc hay lưu mã định danh trên máy bạn.</li>
+<li><strong>Phân tích và báo lỗi:</strong> lợi ích chính đáng của chúng tôi trong việc vận hành, sửa và cải thiện trò chơi; hoặc <strong>sự đồng ý</strong> của bạn khi luật yêu cầu cho việc đọc hay lưu mã định danh trên máy bạn.</li>
+<li><strong>Đo nguồn cài (sau này):</strong> lợi ích chính đáng của chúng tôi trong việc biết quảng cáo nào hiệu quả, hoặc sự đồng ý của bạn khi luật yêu cầu.</li>
 <li><strong>Quảng cáo cá nhân hoá (sau này):</strong> sự đồng ý của bạn.</li>
 <li><strong>Mua hàng (sau này):</strong> thực hiện hợp đồng với bạn.</li>
 <li><strong>Trả lời email của bạn:</strong> lợi ích chính đáng, hoặc thực hiện điều bạn yêu cầu.</li>
 </ul>
 <p>Bạn có thể rút lại sự đồng ý bất cứ lúc nào (mục 10); việc này không ảnh hưởng tới những gì đã xảy ra trước đó.</p>
 <h3 id="vi-8-tr-em">8. Trẻ em</h3>
-<p>Kitty Swarm là trò chơi giải đố dành cho thanh thiếu niên và người lớn. <strong>Trò chơi không được thiết kế cho trẻ dưới 13 tuổi</strong> và chúng tôi không cố ý thu thông tin cá nhân của trẻ dưới 13 tuổi (hoặc độ tuổi cao hơn theo luật nước bạn, như 16 tuổi ở một số nước EU). Trò chơi dùng phân tích, đo lường quảng cáo và, ở phiên bản sau, quảng cáo, là những thứ không phù hợp với trẻ nhỏ.</p>
+<p>Kitty Swarm là trò chơi giải đố dành cho thanh thiếu niên và người lớn. <strong>Trò chơi không được thiết kế cho trẻ dưới 13 tuổi</strong> và chúng tôi không cố ý thu thông tin cá nhân của trẻ dưới 13 tuổi (hoặc độ tuổi cao hơn theo luật nước bạn, như 16 tuổi ở một số nước EU). Trò chơi dùng phân tích và, ở các phiên bản sau, đo lường quảng cáo và quảng cáo, là những thứ không phù hợp với trẻ nhỏ.</p>
 <p>Nếu bạn là cha mẹ hoặc người giám hộ và cho rằng con mình đã chơi và bị thu dữ liệu, hãy viết tới <a href="mailto:support@dumplingcat.com">support@dumplingcat.com</a>, chúng tôi sẽ xoá (mục 10).</p>
 <h3 id="vi-9-gi-th-ng-tin-bao-l-u">9. Giữ thông tin bao lâu</h3>
 <ul>
 <li><strong>Tệp lưu trên máy bạn:</strong> tới khi bạn xoá trò chơi hoặc dữ liệu của nó.</li>
 <li><strong>Firebase Analytics:</strong> dữ liệu sự kiện theo từng người dùng được giữ 14 tháng rồi tự xoá; các báo cáo chỉ có số tổng (ví dụ "1.000 người chơi tới màn 10") có thể giữ lâu hơn.</li>
 <li><strong>Firebase Crashlytics:</strong> báo cáo lỗi văng và mã đi kèm được giữ 90 ngày.</li>
-<li><strong>AppsFlyer:</strong> trong thời gian cần để đo quảng cáo, theo thoả thuận của chúng tôi với AppsFlyer, và xoá khi có yêu cầu.</li>
 <li><strong>Email bạn gửi:</strong> trong thời gian cần để trả lời, không quá 2 năm.</li>
+<li><strong>Dịch vụ thêm sau này (mục 6):</strong> được ghi ở đây kèm thời gian giữ dữ liệu trước khi bật.</li>
 </ul>
 <h3 id="vi-10-l-a-ch-n-v-quy-n-c-a-b-n">10. Lựa chọn và quyền của bạn</h3>
 <ul>
-<li><strong>Ngừng thu thập:</strong> bạn có thể đặt lại hoặc xoá mã quảng cáo (Android: Cài đặt &gt; Quyền riêng tư &gt; Quảng cáo; iOS: theo dõi bị tắt trừ khi bạn cho phép). Gỡ trò chơi sẽ dừng mọi việc thu thập.</li>
+<li><strong>Ngừng thu thập:</strong> bạn có thể đặt lại hoặc xoá mã quảng cáo (Android: Cài đặt &gt; Quyền riêng tư &gt; Quảng cáo; iOS: theo dõi bị tắt trừ khi bạn cho phép). Phiên bản này chưa có công tắc tắt phân tích trong game; gỡ trò chơi sẽ dừng mọi việc thu thập.</li>
 <li><strong>Xem, sửa, xoá, phản đối, nhận bản sao:</strong> tuỳ nơi bạn sống (ví dụ GDPR của EU/Anh, CCPA/CPRA của California, Luật Bảo vệ dữ liệu cá nhân của Việt Nam, Đạo luật Quyền riêng tư dữ liệu của Philippines), bạn có thể yêu cầu xem, sửa, xoá hoặc nhận bản sao dữ liệu, phản đối hoặc hạn chế việc dùng, và rút lại sự đồng ý.</li>
-<li><strong>Cách yêu cầu:</strong> gửi email tới <strong><a href="mailto:support@dumplingcat.com">support@dumplingcat.com</a></strong> với tiêu đề "Privacy request" kèm <strong>Player ID</strong> hiện ở cuối màn hình Cài đặt. Chúng tôi không cần giấy tờ chứng minh nào khác vì chúng tôi không giữ tên hay email của bạn. Chúng tôi sẽ trả lời trong 30 ngày và yêu cầu Google, AppsFlyer xoá dữ liệu tương ứng.</li>
-<li><strong>California:</strong> chúng tôi không bán thông tin cá nhân để lấy tiền. Việc đo quảng cáo cùng các mạng quảng cáo có thể được coi là "chia sẻ" cho quảng cáo theo hành vi giữa các bối cảnh theo luật California; bạn có thể từ chối bằng cách gửi email cho chúng tôi hoặc giới hạn theo dõi quảng cáo trên máy. Chúng tôi sẽ không đối xử khác với bạn vì bạn dùng các quyền này.</li>
+<li><strong>Cách yêu cầu:</strong> gửi email tới <strong><a href="mailto:support@dumplingcat.com">support@dumplingcat.com</a></strong> với tiêu đề "Privacy request" kèm <strong>Player ID</strong> hiện ở cuối màn hình Cài đặt. Chúng tôi không cần giấy tờ chứng minh nào khác vì chúng tôi không giữ tên hay email của bạn. Chúng tôi sẽ trả lời trong 30 ngày và yêu cầu Google xoá dữ liệu Firebase Analytics gắn với Player ID đó. Báo cáo lỗi văng không gắn với Player ID; chúng tự xoá sau 90 ngày.</li>
+<li><strong>California:</strong> chúng tôi không bán thông tin cá nhân, và phiên bản này không chia sẻ nó cho quảng cáo theo hành vi giữa các bối cảnh. Nếu một phiên bản sau đo quảng cáo cùng các mạng quảng cáo (mục 6), việc đó có thể được coi là "chia sẻ" theo luật California; khi đó mục này sẽ nói cách từ chối. Chúng tôi sẽ không đối xử khác với bạn vì bạn dùng các quyền này.</li>
 <li><strong>Khiếu nại:</strong> bạn cũng có thể khiếu nại với cơ quan bảo vệ dữ liệu nơi bạn sống.</li>
 </ul>
 <h3 id="vi-11-b-o-m-t">11. Bảo mật</h3>
-<p>Thông tin trò chơi gửi tới các dịch vụ này được mã hoá khi truyền (HTTPS/TLS). Chỉ chúng tôi có quyền vào bảng điều khiển phân tích và đo nguồn cài, có bật xác minh hai bước. Không hệ thống nào an toàn tuyệt đối; nếu có sự cố ảnh hưởng tới bạn, chúng tôi sẽ thông báo cho bạn và cơ quan chức năng theo quy định.</p>
+<p>Thông tin trò chơi gửi tới các dịch vụ này được mã hoá khi truyền (HTTPS/TLS). Chỉ chúng tôi có quyền vào bảng điều khiển phân tích và báo cáo lỗi văng, có bật xác minh hai bước. Không hệ thống nào an toàn tuyệt đối; nếu có sự cố ảnh hưởng tới bạn, chúng tôi sẽ thông báo cho bạn và cơ quan chức năng theo quy định.</p>
 <h3 id="vi-12-thay-i-ch-nh-s-ch">12. Thay đổi chính sách</h3>
 <p>Chúng tôi sẽ cập nhật trang này khi trò chơi thay đổi những gì nó thu thập (ví dụ khi thêm quảng cáo hoặc mua hàng) và đổi ngày ở đầu trang. Với thay đổi quan trọng, chúng tôi cũng sẽ báo trong game hoặc trong ghi chú cập nhật trên cửa hàng.</p>
 <h3 id="vi-13-li-n-h">13. Liên hệ</h3>
